@@ -43,7 +43,7 @@ Download the orginal MNER dataset (Twitter-2015 and Twitter-2017) from [Google D
 
 - Use `./split_data_similarity/split_dataset/split_twitter2015/2017.ipynb` to sample different data set ($\mathcal{D}_ {10}$, $\mathcal{D}_ {50}$, and $\mathcal{D}_ {100}$).
 
-### Calculate the rank sum of image and text similarity
+### Retrieve Example Module
 
 Utilize `split_data_similarity/similarity_both_hardIndex_twitter2015/2017.py` to calculate the rank sum of image and text similarity
 
