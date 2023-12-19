@@ -37,15 +37,15 @@ Download the orginal MNER dataset (Twitter-2015 and Twitter-2017) from [Google D
 
 ### Data Preprocessing
 
-- use `./process_data/change_dataset_format_twitter2015/2017.ipynb` to format orginal MNER dataset
+- Use `./process_data/change_dataset_format_twitter2015/2017.ipynb` to format orginal MNER dataset
 
-- use `./obtain_image_caption/image_caption_OFA_twitter2015/2017.py` to obtain the image caption
+- Use `./obtain_image_caption/image_caption_OFA_twitter2015/2017.py` to obtain the image caption
 
-- use `./split_data_similarity/split_dataset/split_twitter2015/2017.ipynb` to sample different data set ($\mathcal{D}_ {10}$, $\mathcal{D}_ {50}$, and $\mathcal{D}_ {100}$).
+- Use `./split_data_similarity/split_dataset/split_twitter2015/2017.ipynb` to sample different data set ($\mathcal{D}_ {10}$, $\mathcal{D}_ {50}$, and $\mathcal{D}_ {100}$).
 
 ### Calculate the rank sum of image and text similarity
 
-use `split_data_similarity/similarity_both_hardIndex_twitter2015/2017.py` to calculate the rank sum of image and text similarity
+Utilize `split_data_similarity/similarity_both_hardIndex_twitter2015/2017.py` to calculate the rank sum of image and text similarity
 
 
 ### In-context Learning for Few-shot MNER
