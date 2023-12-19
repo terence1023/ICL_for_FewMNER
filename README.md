@@ -41,7 +41,7 @@ Download the orginal MNER dataset (Twitter-2015 and Twitter-2017) from [Google D
 
 - use `./obtain_image_caption/image_caption_OFA_twitter2015/2017.py` to obtain the image caption
 
-- use `./split_data_similarity/split_dataset/split_twitter2015/2017.ipynb` to sample different data set ($\mathcal{D}_{10}$, $\mathcal{D}_{50}$, and $\mathcal{D}_{100}$).
+- use `./split_data_similarity/split_dataset/split_twitter2015/2017.ipynb` to sample different data set ($\mathcal{D} _{10}$, $\mathcal{D} _{50}$, and $\mathcal{D}_{100}$).
 
 ### Calculate the rank sum of image and text similarity
 
@@ -57,5 +57,32 @@ python twitter2015_50-1_shot-4.py
 python twitter2017_50-1_shot-4.py
 ```
 
+## Reference
 
+If you find this project useful for your research, please consider citing the following paper:
 
+```
+@inproceedings{cai-etal-2023-context,
+    title = "In-context Learning for Few-shot Multimodal Named Entity Recognition",
+    author = "Cai, Chenran  and
+      Wang, Qianlong  and
+      Liang, Bin  and
+      Qin, Bing  and
+      Yang, Min  and
+      Wong, Kam-Fai  and
+      Xu, Ruifeng",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-emnlp.196",
+    doi = "10.18653/v1/2023.findings-emnlp.196",
+    pages = "2969--2979",
+}
+```
+
+If you have any question, please issue the project or email [Chenran Cai](crcai1023@gmail.com), we will reply you soon.
