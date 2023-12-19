@@ -30,7 +30,7 @@ Our code is based on PyTorch 1.12 Required python packages:
 ## How to run it
 
 
-### dataset
+### Dataset
 
 Download the orginal MNER dataset (Twitter-2015 and Twitter-2017) from [Google Drive](https://drive.google.com/file/d/15gdchpCWojP89d-_k3A7UPdGx7xnjZiY/view?usp=sharing), and unzip them into folder `./datatset/mner`
 
