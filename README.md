@@ -1,26 +1,61 @@
-# ICL_for_FewMNER
+# In-context Learning for Few-shot Multimodal Named Entity Recognition
 
-## 数据集
+This repository contains the official `PyTorch` implementation of the paper: In-context Learning for Few-shot Multimodal Named Entity Recognition.
 
-`./datatset/mner`：原始MNER数据集，Twitter-2015, Twitter-2017
-
-
-## 数据预处理
-
-`./process_data/change_dataset_format_twitter2015/2017.ipynb`: 格式化数据集
-
-`./obtain_image_caption/image_caption_OFA_twitter2015/2017.py`: 获得图片描述
-
-`./split_data_similarity/split_dataset/split_twitter2015/2017.ipynb`: 采样数据集，|D|=10, |D|=50, |D|=100
-
-## 计算图片和文本相似度rank和
-
-`split_data_similarity/similarity_both_hardIndex_twitter2015/2017.py`: 计算图片和文本相似度rank和
+In the following, we will guide you how to use this repository step by step.
 
 
-## In-context Learning for Few-shot MNER
+## Abstract
+Thanks in part to the availability of copious annotated resources for some entity categories, existing studies have achieved superior performance in multimodal named entity recognition (MNER). However, in the real-world scenario, it is infeasible to enumerate all entity categories in advance. Therefore, in this paper, we formulate a new few-shot multimodal named entity recognition (FewMNER) task, which aims to effectively locate and identify named entities for a text-image pair only using a small number of labeled examples. Further, we explore the merit of in-context learning (ICL) and propose a novel framework to deal with FewMNER, where three points are taken into account: i.e., converting visual modality, selecting useful examples, and designing an effective task demonstration. Specifically, we first employ an image caption model to convert images into textual descriptions, enabling large language models to absorb information from visual modality. Then, we use the ranking of the sum of similarity rankings from both text and image modalities to select k-nearest examples, which form a demonstration context. Finally, we utilize the MNER definition and the meaning of each entity category as effective instruction. Extensive experimental results demonstrate that our framework outperforms baselines under several few-shot settings. 
 
-`multiMM_gpt3.5_twitter2015_50-1_shot-4.py`: In-context Learning for Few-shot MNER code
+## Architecture
+
+![](image/Model.png)
+
+
+## Result
+![](image/result.jpg)
+
+
+## Preparation
+Our code is based on PyTorch 1.12 Required python packages:
+
+- numpy==1.21.6
+- tqdm==4.64.0
+- pytorch==1.12.1
+- python==3.7.4
+- transformers==4.29.0
+- sentence_transformers==2.2.2
+
+## How to run it
+
+
+### dataset
+
+Download the orginal MNER dataset (Twitter-2015 and Twitter-2017) from [Google Drive](https://drive.google.com/file/d/15gdchpCWojP89d-_k3A7UPdGx7xnjZiY/view?usp=sharing), and unzip them into folder `./datatset/mner`
+
+
+### Data Preprocessing
+
+- use `./process_data/change_dataset_format_twitter2015/2017.ipynb` to format orginal MNER dataset
+
+- use `./obtain_image_caption/image_caption_OFA_twitter2015/2017.py` to obtain the image caption
+
+- use `./split_data_similarity/split_dataset/split_twitter2015/2017.ipynb` to sample different data set ($\mathcal{D}_{10}$, $\mathcal{D}_{50}$, and $\mathcal{D}_{100}$).
+
+### Calculate the rank sum of image and text similarity
+
+use `split_data_similarity/similarity_both_hardIndex_twitter2015/2017.py` to calculate the rank sum of image and text similarity
+
+
+### In-context Learning for Few-shot MNER
+
+Take $\mathcal{D}_{50}$ and 4-shot as an example
+
+```
+python twitter2015_50-1_shot-4.py
+python twitter2017_50-1_shot-4.py
+```
 
 
 
